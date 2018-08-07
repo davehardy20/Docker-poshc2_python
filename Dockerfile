@@ -19,11 +19,13 @@ mingw-w64-i686-dev \
 mingw-w64-common \
 espeak \
 tmux \
+wget \
 graphviz
 
 RUN mkdir /opt/PoshC2_Python
 RUN git clone https://github.com/nettitude/PoshC2_Python /opt/PoshC2_Python/
 RUN pip install -r /opt/PoshC2_Python/requirements.txt
+RUN wget https://raw.githubusercontent.com/davehardy20/Docker-poshc2_python/master/tmux-sessions.sh -P /root/
 
 # Set the working directory
 WORKDIR /opt/PoshC2_Python
