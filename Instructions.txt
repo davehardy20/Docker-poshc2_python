@@ -1,0 +1,50 @@
+PoshC2_Python Docker Build Info
+===============================
+
+Install Docker for your OS
+
+Create a folder for the Dockerfile called PoshC2_Python and copy the Docker file into into
+CD into the new fiolder
+
+Run the following to build a new image from the docker file
+
+docker build --tag=poshc2-python:latest .
+
+this will take a few minutes, once complete you will have a new docker image
+list it with this command
+
+docker image list
+
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+poshc2-python                 latest              c9dcd1a8d926        13 minutes ago      2.91GB
+
+You should have something like the above
+
+To run a new container based upon your image run the following command 
+
+docker run --name poshc2-python -ti poshc2-python:latest /bin/bash
+
+This will place you in a bash shell inside the running container, from here run
+
+tmux new -s poshc2-python
+
+Create 2 panes within this session, Ctrl + b % - this is achieve by pressing ctrl + b and then shift + 5(%)
+
+In the right hand pane run
+
+python /opt/PoshC2_Python/ImplantHandler.py
+
+Press ctrl + b then o to switch panes
+
+then enter python /opt/PoshC2_Python/C2Server.py
+
+This should have both the implant handler and C2Server running.
+
+You can detach from tmux by using ctrl + b d, this will leave PoshC2 running, just as in screen.
+
+To detach from the running docker container enter ctrl p and then ctrl q.
+
+To enter the running container:
+
+docker attach poshc2-python
+
