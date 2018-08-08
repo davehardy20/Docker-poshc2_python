@@ -26,23 +26,21 @@ docker run --name poshc2-python -ti poshc2-python:latest /bin/bash
 
 This will place you in a bash shell inside the running container, from here run
 
-tmux new -s poshc2-python
+From here enter:
 
-Create 2 panes within this session, Ctrl + b % - this is achieve by pressing ctrl + b and then shift + 5(%)
+chmod +x /root/tmux-sessions.sh
+/root/tmux-session.sh
 
-In the right hand pane run
+This script will create a tmux session with 2 windows one window split into 2 panes with C2Server running on the left and ImplantHandler on the right.
+Tmux uses Ctrl + b as its prefix
 
-python /opt/PoshC2_Python/ImplantHandler.py
-
-Press ctrl + b then o to switch panes
-
-then enter python /opt/PoshC2_Python/C2Server.py
-
-This should have both the implant handler and C2Server running.
+To switch windows Ctrl +b n
+To switch panes Ctrl +b o
+To scroll a panes you have to enter whats called copy mode via Ctrl +b [ then use the arrow keys and / or page up/down
 
 You can detach from tmux by using ctrl + b d, this will leave PoshC2 running, just as in screen.
 
-To detach from the running docker container enter ctrl p and then ctrl q.
+To detach from the running docker container enter ctrl p and then ctrl q
 
 To enter the running container:
 
