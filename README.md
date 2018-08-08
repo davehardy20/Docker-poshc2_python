@@ -1,7 +1,7 @@
 PoshC2_Python Docker Build Info
 ===============================
 
-##Install Docker for your OS
+## Install Docker for your OS
 
 I've tested this using Docker in Ubuntu, from here - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
@@ -14,7 +14,7 @@ CD into the new folder
 
 Run the following to build a new image from the docker file
 
-##Clone this repository
+## Clone this repository
 
 git clone https://github.com/davehardy20/Docker-poshc2_python.git
 
@@ -72,6 +72,6 @@ To enter the running container:
 docker attach poshc2-python
 
 
-#Important Step
+# Important Step
 This is important to do this as the default payloads won't work due to the payload generation picking up the wrong IP address.
 In the ImplantHandler window, run the command to createnewpayload and set the url to the ip or hostname of the docker hosts network adaptor, as set in the docker run command above.
