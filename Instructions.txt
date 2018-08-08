@@ -22,7 +22,7 @@ You should have something like the above
 
 To run a new container based upon your image run the following command 
 
-docker run --name poshc2-python -ti poshc2-python:latest /bin/bash
+docker run --name poshc2-python -ti -p 443:443 poshc2-python:latest /bin/bash
 
 This will place you in a bash shell inside the running container.
 

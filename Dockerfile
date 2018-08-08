@@ -27,5 +27,8 @@ RUN git clone https://github.com/nettitude/PoshC2_Python /opt/PoshC2_Python/
 RUN pip install -r /opt/PoshC2_Python/requirements.txt
 RUN wget https://raw.githubusercontent.com/davehardy20/Docker-poshc2_python/master/tmux-sessions.sh -P /root/
 
+EXPOSE 80
+EXPOSE 443
+
 # Set the working directory
 WORKDIR /opt/PoshC2_Python
