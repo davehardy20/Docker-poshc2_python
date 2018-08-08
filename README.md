@@ -64,13 +64,13 @@ You can detach from tmux by using ctrl + b d, this will leave PoshC2 running, ju
 To detach from the running docker container enter ctrl p and then ctrl q, this will leave it running.
 
 Just exiting the container will close it, so you will need to enter the following to re-start the container
-
+```
 docker container start poshc2-python
-
+```
 To enter the running container:
-
+```
 docker attach poshc2-python
-
+```
 
 # Important Step
 This is important to do this as the default payloads won't work due to the payload generation picking up the wrong IP address.
