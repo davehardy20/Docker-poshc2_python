@@ -9,9 +9,6 @@ And
 
 Docker for Mac, from here - https://docs.docker.com/docker-for-mac/install/
 
-Create a folder for the Dockerfile called PoshC2_Python and copy the Docker file into into
-CD into the new folder
-
 Run the following to build a new image from the docker file
 
 ## Clone this repository
