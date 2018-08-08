@@ -22,7 +22,11 @@ You should have something like the above
 
 To run a new container based upon your image run the following command 
 
-docker run --name poshc2-python -ti -p 443:443 poshc2-python:latest /bin/bash
+docker run --name poshc2-python -ti -p host ip to listen on:443:443 poshc2-python:latest /bin/bash
+
+so if your hosts external IP is 192.168.0.117
+
+docker run --name poshc2-python -ti -p 192.168.0.117:443:443 poshc2-python:latest /bin/bash
 
 This will place you in a bash shell inside the running container.
 
@@ -50,3 +54,7 @@ To enter the running container:
 
 docker attach poshc2-python
 
+
+*********
+This is important as the default payloads won't work due to the payload generation picking up the wrong IP address.
+In ImplantHandler run the command to createnewpayload and set the url to the ip or hostname of the docker hosts network adaptor, as set in the docker run command above.
