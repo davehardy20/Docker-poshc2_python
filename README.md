@@ -9,8 +9,6 @@ And
 
 Docker for Mac, from here - https://docs.docker.com/docker-for-mac/install/
 
-Run the following to build a new image from the docker file
-
 ## Clone this repository
 
 git clone https://github.com/davehardy20/Docker-poshc2_python.git
