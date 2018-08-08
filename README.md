@@ -42,6 +42,7 @@ This will place you in a bash shell inside the running container.
 
 From here enter:
 ```
+chmod +x /root/tmux-sessions.sh
 /root/tmux-session.sh
 ```
 Running this script will create a tmux session with 2 windows, one window split into 2 panes with C2Server running on the left and ImplantHandler on the right.
