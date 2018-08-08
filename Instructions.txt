@@ -4,7 +4,7 @@ PoshC2_Python Docker Build Info
 Install Docker for your OS
 
 Create a folder for the Dockerfile called PoshC2_Python and copy the Docker file into into
-CD into the new fiolder
+CD into the new folder
 
 Run the following to build a new image from the docker file
 
@@ -13,7 +13,7 @@ docker build --tag=poshc2-python:latest .
 this will take a few minutes, once complete you will have a new docker image
 list it with this command
 
-docker image list
+docker images
 
 REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
 poshc2-python                 latest              c9dcd1a8d926        13 minutes ago      2.91GB
@@ -24,23 +24,27 @@ To run a new container based upon your image run the following command
 
 docker run --name poshc2-python -ti poshc2-python:latest /bin/bash
 
-This will place you in a bash shell inside the running container, from here run
+This will place you in a bash shell inside the running container.
 
 From here enter:
 
 chmod +x /root/tmux-sessions.sh
 /root/tmux-session.sh
 
-This script will create a tmux session with 2 windows one window split into 2 panes with C2Server running on the left and ImplantHandler on the right.
+This script will create a tmux session with 2 windows, one window split into 2 panes with C2Server running on the left and ImplantHandler on the right.
 Tmux uses Ctrl + b as its prefix
 
 To switch windows Ctrl +b n
 To switch panes Ctrl +b o
-To scroll a panes you have to enter whats called copy mode via Ctrl +b [ then use the arrow keys and / or page up/down
+To scroll a panes you have to enter whats called copy mode via Ctrl +b [ then use the arrow keys and / or page up/down, use the Escape key to exit copy mode.
 
 You can detach from tmux by using ctrl + b d, this will leave PoshC2 running, just as in screen.
 
-To detach from the running docker container enter ctrl p and then ctrl q
+To detach from the running docker container enter ctrl p and then ctrl q, this will leave it running.
+
+Just exiting the container will close it, so you will need to enter the following to re-start the container
+
+docker container start poshc2-python
 
 To enter the running container:
 
