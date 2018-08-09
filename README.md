@@ -51,7 +51,7 @@ Tmux uses Ctrl + b as its prefix, its similar to screen.
 
 To switch windows Ctrl +b n
 To switch panes Ctrl +b o
-To scroll a panes you have to enter whats called copy mode via Ctrl +b [ then use the arrow keys and / or page up/down, use the Escape key to exit copy mode.
+To scroll panes you have to enter whats called copy mode via Ctrl +b [ then use the arrow keys and / or page up/down, use the Escape key to exit copy mode.
 
 You can detach from tmux by using ctrl + b d, this will leave PoshC2 running, just as in screen.
 
