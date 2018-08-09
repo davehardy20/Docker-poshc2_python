@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Get the External IP of C2Server
+echo Please Enter the External IP address of the C2Server
+read EXTIPADDR
+sed -i 's/172.16.0.126'/$EXTIPADDR/ /opt/PoshC2_Python/Config.py
+
 SESSION=Red_Team
 set mouse on
 tmux -2 new -d -s $SESSION
