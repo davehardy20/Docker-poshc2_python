@@ -44,7 +44,7 @@ From here enter:
 ```
 /root/tmux-session.sh
 ```
-Running this script will create a tmux session with 2 windows, one window split into 2 panes with C2Server running on the left and ImplantHandler on the right.
+Running this script will ask you to enter the external ip address of the C2 Server, (the same as you did for the docker run command), and then create a tmux session with 2 windows, one window split into 2 panes with C2Server running on the left and ImplantHandler on the right.
 
 ![Alt text](./screenshots/poshc2-windows.png?raw=true "PoshC2 Windows")
 Tmux uses Ctrl + b as its prefix, its similar to screen.
@@ -65,7 +65,3 @@ To enter the running container:
 ```
 docker attach poshc2-python
 ```
-
-# Important Step
-This is important to do this as the default payloads won't work due to the payload generation picking up the wrong IP address.
-In the ImplantHandler window, run the command to createnewpayload and set the url to the ip or hostname of the docker hosts network adaptor, as set in the docker run command above.

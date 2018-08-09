@@ -25,7 +25,7 @@ graphviz
 RUN mkdir /opt/PoshC2_Python
 RUN git clone https://github.com/nettitude/PoshC2_Python /opt/PoshC2_Python/
 RUN pip install -r /opt/PoshC2_Python/requirements.txt
-RUN wget https://raw.githubusercontent.com/davehardy20/Docker-poshc2_python/master/tmux-sessions.sh -P /root/
+COPY ./tmux-sessions.sh /root/tmux-sessions.sh
 RUN chmod +x /root/tmux-sessions.sh
 
 EXPOSE 80
